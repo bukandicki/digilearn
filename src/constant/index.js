@@ -1,9 +1,9 @@
-import BoxIcon from "@/assets/icons/Box.vue"
-import PersonIcon from "@/assets/icons/Person.vue"
-import SettingIcon from "@/assets/icons/Setting.vue"
-import AnalyticIcon from "@/assets/icons/Analytic.vue"
-import CameraIcon from "@/assets/icons/Camera.vue"
-import ChainIcon from "@/assets/icons/Chain.vue"
+import BoxIcon from "@/assets/icons/Box.vue";
+import PersonIcon from "@/assets/icons/Person.vue";
+import SettingIcon from "@/assets/icons/Setting.vue";
+import AnalyticIcon from "@/assets/icons/Analytic.vue";
+import CameraIcon from "@/assets/icons/Camera.vue";
+import ChainIcon from "@/assets/icons/Chain.vue";
 
 export const sidebarLinks = [
     {
@@ -408,4 +408,17 @@ export const sidebarLinks = [
             }
         ]
     }
-]
+];
+
+export const breadcrumbLinks = [
+    {
+        id: 1,
+        title: "Content",
+        to: "#"
+    },
+    {
+        id: 2,
+        title: "Course",
+        to: "#"
+    }
+];
