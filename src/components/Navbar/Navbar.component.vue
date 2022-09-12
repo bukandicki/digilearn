@@ -1,6 +1,7 @@
 <script setup>
 import SearchIcon from "@/assets/icons/Search.vue";
 import BellIcon from "@/assets/icons/Bell.vue";
+import MenuIcon from "@/assets/icons/Menu.vue";
 
 const props = defineProps({
     avatar: String,
@@ -8,12 +9,18 @@ const props = defineProps({
     name: String,
     role: String
 });
+
+const emits = defineEmits(["onShowSidebar"]);
 </script>
 
 <template>
     <header>
         <nav class="flex justify-between py-4 px-6 rounded-md shadow-md">
-            <SearchIcon class="w-6 cursor-pointer" />
+            <MenuIcon
+                class="sm:hidden w-6 cursor-pointer"
+                @click="emits('onShowSidebar')"
+            />
+            <SearchIcon class="hidden sm:block w-6 cursor-pointer" />
             <div class="flex">
                 <div class="flex relative w-[20px] mr-6">
                     <BellIcon class="w-[20px]" />

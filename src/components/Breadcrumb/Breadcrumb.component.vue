@@ -11,15 +11,16 @@ const props = defineProps({ title: String, links: Array });
             {{ title }}
         </h1>
         <div class="flex items-center h-[26px] border-l-2 pl-4">
-            <HomeIcon class="w-[14px] fill-danger" />
-            <span
+            <HomeIcon class="w-[14px] fill-danger cursor-pointer" />
+            <a
                 class="inline-flex ml-[10px] text-primary text-sm"
+                href="#"
                 v-for="link in links"
                 :key="link.id"
             >
                 <ArrowIcon class="w-[14px] mr-[10px] fill-primary" />
                 {{ link.title }}
-            </span>
+            </a>
         </div>
     </div>
 </template>

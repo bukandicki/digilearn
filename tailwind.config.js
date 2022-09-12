@@ -14,6 +14,7 @@ module.exports = {
                 success: "#0093AD",
                 primary: "#457B9D",
                 white: "#FFFFFF",
+                tab: "#0093AD",
                 black: "#1F2855"
             },
             spacing: {
