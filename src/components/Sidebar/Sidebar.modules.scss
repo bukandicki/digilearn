@@ -1,0 +1,23 @@
+.sidebar {
+    max-width: 260px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &__logo {
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__links {
+        transition: max-height 0.3s ease-out;
+        max-height: 0;
+
+        &--show {
+            height: auto;
+            max-height: 1000px;
+        }
+    }
+}
