@@ -23,7 +23,7 @@ const handleShowMenu = (id) => {
         </span>
         <div class="sidebar__container">
             <div
-                class="sidebar__link-wrapper"
+                class="sidebar__link-wrapper mb-1"
                 v-for="link in sidebarLinks"
                 :key="link.id"
             >
@@ -52,15 +52,17 @@ const handleShowMenu = (id) => {
                     />
                 </span>
                 <ul
-                    class="sidebar__links overflow-hidden"
+                    class="sidebar__links"
                     :class="{ 'sidebar__links--show': showMenu === link.id }"
                 >
                     <li
-                        class="text-primary transition-all text-base font-medium px-6 py-2 my-1 flex cursor-pointer rounded-md group hover:bg-danger hover:text-white"
+                        class="text-primary transition-all text-base font-medium px-6 py-2 my-1 flex cursor-pointer rounded-md group hover:bg-danger hover:text-white hover:shadow-danger hover:shadow-md"
                         v-for="menu in link.menus"
                         :key="menu.id"
                     >
-                        <CircleIcon class="w-4 mr-4 group-hover:fill-white" />
+                        <CircleIcon
+                            class="w-4 mr-4 fill-black group-hover:fill-white"
+                        />
                         {{ menu.title }}
                     </li>
                 </ul>
